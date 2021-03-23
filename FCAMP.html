@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+h1,h2{font-family: 'Pacifico', cursive;}
+body, html {height: 100%}
+p {line-height: 2}
+
+.bgimg, .bgimg2 {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.bgimg {background-image: url("file:///D:/Semester%207/Web%20Design%202/123841277_1448168708705951_5498233239581826833_o.jpg")}
+.bgimg2 {background-image: url("file:///D:/Semester%207/Web%20Design%202/124466596_1451476365041852_5644413837129470392_o.jpg")}
+</style>
+
+<body>
+
+<!-- Header / Home-->
+<header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-white w3-center">
+    <h1 class="w3-jumbo">F-CAMP 2021</h1>
+    <h2>Special event in student life</h2>
+    <h2><b>29.10.2021</b></h2>
+  </div>
+</header>
+
+<!-- Navbar -->
+<div class="w3-bottom w3-hide-small">
+  <div class="w3-bar w3-orange w3-center w3-padding w3-opacity-min w3-hover-orange">
+    <a href="#home" style="width:20%" class="w3-bar-item w3-button w3-hover-amber w3-hover-text-white">Home</a>
+    <a href="#about" style="width:20%" class="w3-bar-item w3-button w3-hover-amber w3-hover-text-white">About F-camp</a>
+     <a href="#gallery" style="width:20%" class="w3-bar-item w3-button w3-hover-amber w3-hover-text-white">Gallery</a>
+    <a href="#Date&Venue" style="width:20%" class="w3-bar-item w3-button w3-hover-amber w3-hover-text-white">Date & Venue</a>
+    <a href="#rsvp" style="width:20%" class="w3-bar-item w3-button w3-hover-amber w3-hover-text-white">RSVP</a>
+  </div>
+</div>
+
+<!-- Detail -->
+<div class="w3-container w3-padding-64 w3-pale-blue" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-text-black"><b>F - Camp 2021</b></h1>
+    <br>
+    <br>
+    <video width="900" autoplay muted loop >
+  <source src="D:\Semester 7\Web Design 2\10000000_500740434623984_2293841776471129957_n.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+</video>
+<br>
+    <p><i>Maybe you already know or you may not know that F-camp is a welcoming event for new students of FPT University. This special event is held once a year by the students of the previous course and is only intended to welcome new students who have joined the FPT family. For this event to take place, it takes a lot of work and a lot of time, although everyone had to pour a lot of sweat, tears, even blood, but just need a laugh. everyone is still trying to overcome difficulties to prepare a memorable event in the student life of the freshman students.</i>
+    </p><br>
+    <p class="w3-center"><a href="#Date&Venue" class="w3-button w3-orange w3-hover-amber w3-hover-text-white w3-round w3-padding-large w3-large">F-Camp Details</a></p>
+  </div>
+</div>
+
+<!-- Background photo -->
+<div class="w3-display-container bgimg2">
+  <div class="w3-display-middle w3-text-white w3-center">
+    <h1 class="w3-jumbo">You Are Invited</h1><br>
+    <h2>Check your email..</h2>
+  </div>
+</div>
+
+<!-- Gallery -->
+<div class="w3-container w3-padding-64 w3-pale-red" id="gallery">
+  <h1 class="w3-center w3-text-black"><b>Gallery</b></h1>
+  <br>
+  <br>
+  <br>
+
+<div class="w3-content" style="max-width:1200px">
+  <img class="mySlides" src="D:\Semester 7\Web Design 2\124454757_1451470978375724_1720695458331917159_o.jpg" style="width:100%">
+  <img class="mySlides" src="D:\Semester 7\Web Design 2\124646776_1449625515226937_8719840920625426358_o.jpg" style="width:100%;display:none">
+  <img class="mySlides" src="D:\Semester 7\Web Design 2\123804856_1448844451971710_6816122410592884632_o.jpg" style="width:100%;display:none">
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="D:\Semester 7\Web Design 2\124454757_1451470978375724_1720695458331917159_o.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="D:\Semester 7\Web Design 2\124646776_1449625515226937_8719840920625426358_o.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="D:\Semester 7\Web Design 2\123804856_1448844451971710_6816122410592884632_o.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+
+<!-- F-camp information -->
+<div class="w3-container w3-padding-64 w3-pale-yellow w3-center" id="Date&Venue">
+  <div class="w3-content">
+    <h1 class="w3-text-black"><b>Date & Venue</b></h1>
+    <img class="w3-round-large w3-grayscale" src="D:\Semester 7\Web Design 2\124671399_1451473768375445_231010760918584897_o.jpg" style="width:100%;margin:64px 0">
+    <div class="w3-row">
+      <div class="w3-half">
+        <h2>When</h2>
+        <p>Music festival - 8:00am</p>
+        <p>Lunch together - 11:00am</p>
+        <p>Mini games - 2:00pm</p>
+        <p>Music festival - 4:00pm</p>
+        <p>Gala F-Camp - 6:00pm</p>
+      </div>
+      <div class="w3-half">
+        <h2>Where</h2>
+        <p>30m walkway</p>
+        <p>FPT dojo</p>
+        <p>30m walkway</p>
+        <p>30m walkway</p>
+        <p>30m walkway</p>
+      </div>
+    </div>
+    <br>
+    <br>
+
+  </div>
+</div>
+
+<!-- Answer & question -->
+
+<!-- RSVP section -->
+<div class="w3-container w3-padding-64 w3-pale-green w3-center w3-wide" id="rsvp">
+  <h1>HOPE YOU DON'T MISS IT!</h1>
+  <p class="w3-large">Kindly Respond By October, 2021</p>
+  <p class="w3-xlarge">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-hover-pale-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
+  </p>
+</div>
+
+<!-- RSVP modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+    <div class="w3-container w3-white w3-center">
+      <h1 class="w3-wide">CAN YOU JOIN US?</h1>
+      <p>We really hope you don't miss it.</p>
+      <form>
+        <input class="w3-input w3-border" type="text" placeholder="Name(s)" name="name">
+      </form>
+      <p><i>Sincerely</i></p>
+      <div class="w3-row">
+        <div class="w3-half">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-green w3-hover-pale-green">Yeah, of course</button>
+        </div>
+        <div class="w3-half">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-red w3-hover-pale-red">I can't, so sorry</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
